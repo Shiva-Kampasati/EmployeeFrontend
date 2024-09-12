@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { URL } from "../Constants";
 
 const EmployeeList = () => {
     const [employeeList, setEmployeeList] = useState([]);
@@ -9,7 +10,7 @@ const EmployeeList = () => {
 
     useEffect(() => {
         async function fetchData() {
-            await axios.get(`http://localhost:9989/api/Employee`)
+            await axios.get(`${URL}/Employee`)
                 .then(res => {
                     setEmployeeList(res.data.result);
                     setIsLoading(false);
