@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import EmployeeList from "./Empoyee/EmployeList";
+import EmployeeList from "./Employee/EmployeeList";
 import Navbar from './Commons/Navbar';
-import EmployeeAdd from "./Empoyee/EmployeeAdd";
+import EmployeeAdd from "./Employee/EmployeeAdd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";

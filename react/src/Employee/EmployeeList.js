@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from "react";
 
 
 const EmployeeList = () => {
-    const apiUrl = process.env.REACT_APP_URL;  // Ensure this is REACT_APP_URL
+    const apiUrl = process.env.REACT_APP_URL;  // Ensure this is REACT_APP_DOTNET_URL
     const [employeeList, setEmployeeList] = useState([]); 
     const [isLoading, setIsLoading] = useState(true);
     const [colDefs] = useState([
@@ -21,7 +21,7 @@ const EmployeeList = () => {
        const fetchData=useCallback(async()=> {
         setIsLoading(true)
 
-        await axios.get(`${apiUrl}/Employee`)
+        await axios.get(`${apiUrl}/api/Employee`)
             .then(res => {
                 setEmployeeList(res.data.result);
                 setIsLoading(false);

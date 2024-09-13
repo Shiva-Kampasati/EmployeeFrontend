@@ -13,11 +13,13 @@ const EmployeeAdd = () => {
         }));
     };
 
-    const apiUrl = process?.env?.REACT_APP_URL;  // Ensure this is REACT_APP_URL
+    const apiUrl = process.env.REACT_APP_URL;
+    // const apiUrl = process?.env?.REACT_APP_DOTNET_URL;  // Ensure this is REACT_APP_DOTNET_URL
+
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        await axios.post(`${apiUrl}/Employee`, employeeAdd, {
+        await axios.post(`${apiUrl}/api/Employee`, employeeAdd, {
             headers: {
                 'Content-Type': 'multipart/form-data' // Ensure the correct header for form data
             }
