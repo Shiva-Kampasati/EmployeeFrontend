@@ -21,7 +21,7 @@ const EmployeeList = () => {
        const fetchData=useCallback(async()=> {
         setIsLoading(true)
 
-        await axios.get(`${apiUrl}/api/Employee`)
+        await axios.get(`${apiUrl}/Employee`)
             .then(res => {
                 setEmployeeList(res.data.result);
                 setIsLoading(false);

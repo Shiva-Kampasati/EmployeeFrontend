@@ -19,7 +19,7 @@ const EmployeeAdd = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        await axios.post(`${apiUrl}/api/Employee`, employeeAdd, {
+        await axios.post(`${apiUrl}/Employee`, employeeAdd, {
             headers: {
                 'Content-Type': 'multipart/form-data' // Ensure the correct header for form data
             }
