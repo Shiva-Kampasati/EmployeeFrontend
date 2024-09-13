@@ -1,7 +1,6 @@
 import axios from "axios";
-import { useState } from "react"
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { URL } from "../Constants";
 
 const EmployeeAdd = () => {
     const [employeeAdd, setEmployeeAdd] = useState({ name: '', code: '', location: '', roleId: 0 })
@@ -14,10 +13,11 @@ const EmployeeAdd = () => {
         }));
     };
 
+    const apiUrl = process?.env?.REACT_APP_URL;  // Ensure this is REACT_APP_URL
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent default form submission
 
-        await axios.post(`${URL}/Employee`, employeeAdd, {
+        await axios.post(`${apiUrl}/Employee`, employeeAdd, {
             headers: {
                 'Content-Type': 'multipart/form-data' // Ensure the correct header for form data
             }

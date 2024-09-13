@@ -11,3 +11,103 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Container holding everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  flex-shrink: 0; /* Fix header height */
+}
+
+/* Main content holds left and right panels */
+.main-content {
+  display: flex;
+  flex: 1; /* Takes the rest of the height */
+}
+
+/* Left Panel */
+.left-panel {
+  background-color: #f4f4f4;
+  width: 20%; /* Adjust as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Right Panel */
+.right-panel {
+  background-color: #eaeaea;
+  width: 80%; /* Adjust as needed */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.w-5{
+  width: 5%;
+}
+
+.nav-icons{
+  font-size: 30px;
+  text-decoration: none;
+  color: #454545;
+  display: flex;
+  justify-content: space-between;
+}
+.close-icon{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding: 10%;
+}
+.flex-end{
+  justify-content: flex-end !important;
+}
+
+/* Left panel styles */
+.left-panel {
+  background-color: #f4f4f4;
+  /* width: 25%; */
+  /* padding-left: 35px; */
+  box-sizing: border-box;
+}
+
+/* Menu styling */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #ddd;
+}
+
+/* Icon styles */
+.menu-icon {
+  font-size: 24px; /* Adjust icon size */
+  margin-right: 15px;
+  color: #333; /* Icon color */
+}
+
+/* Text styles */
+.menu-text {
+  font-size: 18px; /* Adjust text size */
+  color: #333; /* Text color */
+  font-family: Arial, sans-serif;
+}

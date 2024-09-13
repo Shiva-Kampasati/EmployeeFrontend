@@ -26,6 +26,15 @@ def get_employees():
 
     return {"result":emps}, 200
 
+@app.route("/Employee", methods=["DELETE"])
+def delete_emp():
+    try:
+        id:int = request.args.get("id")
+        Employee.delete_employee(id)
+        return {"msg":"deleted successfully"},200
+    except Exception as e:
+        print(f"error occured {e}")
+
 
 class Employee(db.Model):
     __tablename__  = "tbl_employee"
@@ -64,6 +73,11 @@ class Employee(db.Model):
         except Exception as e:
             print(f"error occured {e}")
 
+    def delete_employee(id):
+        emp = Employee.query.filter(Employee.id == id).first()
+        db.session.delete(emp)
+        db.session.commit()
+        
 with app.app_context():
     db.create_all()
     
