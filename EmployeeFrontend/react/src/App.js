@@ -1,19 +1,24 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import EmployeeAdd from './Empoyee/EmployeeAdd';
-import EmployeeList from './Empoyee/EmployeList';
-import Navbar from './Commons/Navbar';
+import { useState } from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import "./App.css";
+import Login from './Authentication/Login';
+import Register from './Authentication/Register';
+import Layout from './Layout';
 
 function App() {
+  const [logId, setLogId] = useState(localStorage.getItem('user_id'))
+  const updateLogStatus =()=>{
+    let logStatus = localStorage.getItem('user_id')
+    setLogId(logStatus)
+  }
   return (
     <Router>
-      <div className="App">
-        <Navbar />
+        {logId ?<Layout />:
         <Routes>
-          <Route path='/EmployeeList' element={<EmployeeList />} />
-          <Route path='/EmployeeAdd' element={<EmployeeAdd />} />
+          <Route path='/' element={<Login updateLogStatus={updateLogStatus}/>} />
+          <Route path='/Register' element={<Register />} />
         </Routes>
-      </div>
+        }
     </Router>
   );
 }
