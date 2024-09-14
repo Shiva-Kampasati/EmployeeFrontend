@@ -16,7 +16,6 @@ const Login = (props) => {
         let axiosInstance = AxiosInstance();
         axiosInstance.post("/login", {email:state.email, password:state.password}).then((res)=>{
             if(res.status ===200){
-                debugger
                 localStorage.setItem("user_id", 'Logged')
                 SuccessAlert("Success", "Logged in successfully", "success", true)
                 // nav("/EmployeeList")

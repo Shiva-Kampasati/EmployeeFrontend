@@ -15,7 +15,6 @@ const Register = () => {
     const nav =useNavigate()
     const handleSubmit = () => {
         let axiosInstance =AxiosInstance();
-        debugger
         axiosInstance.post("/Organization", state).then((res)=>{
             if(res.status ===200){
                 SuccessAlert("Created!", "successfully created a account", "success", true)
