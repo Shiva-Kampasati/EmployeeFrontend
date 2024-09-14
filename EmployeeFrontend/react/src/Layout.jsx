@@ -1,15 +1,17 @@
-import { Route, Routes } from "react-router-dom";
-import EmployeeList from "./Employee/EmployeeList";
-import Navbar from './Commons/Navbar';
-import EmployeeAdd from "./Employee/EmployeeAdd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from './Commons/Navbar';
+import Dashboard from "./Dashboard.jsx";
+import EmployeeAdd from "./Employee/EmployeeAdd";
+import EmployeeList from "./Employee/EmployeeList";
 
 const Layout = () => {
     const[navClosed, setNavClosed] =useState(false)
     return <div className="container">
         <header className="header">
+
             {/* Header */}
         </header>
         <div className="main-content">
@@ -26,9 +28,10 @@ const Layout = () => {
             </aside>
             <section className="right-panel">
                 
-        <Routes>
-                <Route path='/EmployeeList' element={<EmployeeList />} />
-                <Route path='/EmployeeAdd' element={<EmployeeAdd />} />
+                <Routes>
+                    <Route path='/' element={<Dashboard />} />
+                    <Route path='/EmployeeList' element={<EmployeeList />} />
+                    <Route path='/EmployeeAdd' element={<EmployeeAdd />} />
                 </Routes>
             </section>
         </div>

@@ -16,10 +16,7 @@ function Navbar(props) {
             <Link to="/" className='nav-icons'>
                 <FontAwesomeIcon icon={faHouse} title='Dashboard' className="menu-icon"/>
                 <span hidden={navClosed} className="menu-text">Dashboard</span></Link><br /><br />
-             <Link to="/Login" className='nav-icons'>
-                <FontAwesomeIcon icon={faUserPlus} title='Login' className="menu-icon"/>
-                <span hidden={navClosed} className="menu-text">Login</span></Link><br /><br />
-            <Link to="/EmployeeList" className='nav-icons' >
+                         <Link to="/EmployeeList" className='nav-icons' >
                 <FontAwesomeIcon icon={faUsers} title='Employee List' className="menu-icon"/>
                 <span hidden={navClosed} className="menu-text">EmployeeList</span></Link><br /><br />
             <Link to="/EmployeeAdd" className='nav-icons'>

@@ -1,16 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 /* Container holding everything */
 .container {
@@ -21,11 +8,11 @@ code {
 
 /* Header */
 .header {
-  background-color: #333;
+  background-color: #2eb1e3;
   color: white;
   text-align: center;
-  padding: 20px;
-  flex-shrink: 0; /* Fix header height */
+  padding: 25px;
+  flex-shrink: 0; /* Fix header height */ 
 }
 
 /* Main content holds left and right panels */
@@ -36,7 +23,7 @@ code {
 
 /* Left Panel */
 .left-panel {
-  background-color: #f4f4f4;
+  background-color: #283658;
   width: 20%; /* Adjust as needed */
   padding: 20px;
   box-sizing: border-box;
@@ -44,7 +31,7 @@ code {
 
 /* Right Panel */
 .right-panel {
-  background-color: #eaeaea;
+  background-color: #283658;
   width: 80%; /* Adjust as needed */
   padding: 20px;
   box-sizing: border-box;
@@ -66,6 +53,7 @@ code {
   justify-content: center;
   font-size: 25px;
   padding: 10%;
+  color: black !important;
 }
 .flex-end{
   justify-content: flex-end !important;
@@ -110,4 +98,54 @@ code {
   font-size: 18px; /* Adjust text size */
   color: #333; /* Text color */
   font-family: Arial, sans-serif;
+}
+
+.login-center{
+  padding: 15% 2% 0 2%;
+  
+}
+
+.login-bg{
+  /* background-color: #283658; */
+  padding: 5% 10% 5% 10%;
+  margin:0% 30% 0% 30%;
+  border-radius: 20px;
+}
+.register-bg{
+  /* background-color: #283658; */
+  padding: 5% 10% 5% 10%;
+  margin:0% 25% 0% 25%;
+  border-radius: 20px;
+}
+.register-form{
+  margin:0% 10% 0% 10%;
+}
+.login-header{
+  color: white;
+  margin-top: 12%;
+  padding-top: 2%;
+}
+
+.login-btn{
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 6%;
+}
+
+a{
+  color: #2eb1e3 !important;
+}
+
+.justify-content-center{
+  display: flex;
+  justify-content: space-between;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.register-link{
+  margin-top: 5%;
+  text-align: center;
 }
